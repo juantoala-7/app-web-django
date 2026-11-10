@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <div> Número de personas: {{ no_personas }}</div>
+
+    <ul>
+    {% for p in personas %}
+        <li>{{ p.nombre }} {{ p.apellidos }} - {{ p.edad }} años </li>
+    {% empty %}
+        <li>No hay personas registradas.</li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>
